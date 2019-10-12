@@ -1,0 +1,51 @@
+1)Direct applications - 
+Balancing of symbols
+• Infix-to-postfix conversion
+• Evaluation of postfix expression
+• Implementing function calls (including recursion)
+• Finding of spans (finding spans in stock markets, refer to Problems section)
+• Page-visited history in a Web browser [Back Buttons]
+• Undo sequence in a text editor
+• Matching Tags in HTMLand XML
+
+2)Indirect applicatoins -
+Auxiliary data structure for other algorithms (Example: Tree traversal algorithms)
+• Component of other data structures (Example: Simulating queues, refer Queues
+chapter)
+
+3)Static array Time complexities
+Space Complexity (for n push operations) O(n)
+Time Complexity of Push() O(1)
+Time Complexity of Pop() O(1)
+Time Complexity of Size() O(1)
+Time Complexity of IsEmptyStack() O(1)
+Time Complexity of IsFullStackf) O(1)
+Time Complexity of DeleteStackQ O(1)
+
+4)Dynamic array time complexities
+Space Complexity (for n push operations) O(n)
+Time Complexity of CreateStack() O(1)
+Time Complexity of PushQ O(1) (Average)
+Time Complexity of PopQ O(1)
+Time Complexity of Top() O(1)
+Time Complexity of IsEmpryStackf) O(1))
+Time Complexity of IsFullStackf) O(1)
+Time Complexity of DeleteStackQ O(1)
+
+5)Linked list time complexities
+Space Complexity (for n push operations) O(n)
+Time Complexity of CreateStack() O(1)
+Time Complexity of Push() O(1) (Average)
+Time Complexity of Pop() O(1)
+Time Complexity of Top() O(1)
+Time Complexity of IsEmptyStack() O(1)
+Time Complexity of DeleteStack() O(n)
+
+6)We call amortized time of a push operation is the average time taken by a push over the series of
+operations, that is, T(n)/n
+
+7)
+Incremental Strategy -
+The amortized time (average time per operation) of a push operation is O(n) [O(n^2)/n].
+Doubling Strategy -
+In this method, the amortized time of a push operation is O(1) [O(n)/n].
