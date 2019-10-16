@@ -49,3 +49,31 @@ Incremental Strategy -
 The amortized time (average time per operation) of a push operation is O(n) [O(n^2)/n].
 Doubling Strategy -
 In this method, the amortized time of a push operation is O(1) [O(n)/n].
+
+8)How to implement three stacks in one array
+We need to know the top1 of first array , top3 of third array and , start2 and top2 of the second array
+whenever we feel that either of the array is bumping we adjust that array accordingly.
+For popping we don't need to shift anything we just need to decrease the size accordingly
+
+9)Logic to implement m stacks in one array
+Let's assume the size of the array is n so we split it into m equal parts
+We use base and top to denote the starting point and the moving pointer respectively
+if top of i is equal to base of i+1 then we say that particular stack is full
+1) For pushing on to the ith stack, we check whether the top of ith stack is pointing to
+Base[i+1] (this case defines that ith stack is full). That means, we need to see if
+adding a new element causes it to bump into the i + 1th stack. If so, try to shift the
+stacks from i + 1th stack to mth stack toward the right. Insert the new element at
+(Base[i] + Top[i]).
+2) If right shifting is not possible then try shifting the stacks from 1 to i –1
+th stack toward
+the left.
+3) If both of them are not possible then we can say that all stacks are full.
+Popping from i:-
+th stack: For popping, we don’t need to shift, just decrement the size of the
+appropriate stack. The only case to check is stack empty case.
+
+10)Problem-18 Consider an empty stack of integers. Let the numbers 1,2,3,4,5,6 be pushed on to
+this stack in the order they appear from left to right. Let S indicate a push and X indicate a
+pop operation. Can they be permuted in to the order 325641(output) and order 154623?
+Solution: SSSXXSSXSXXX outputs 325641. 154623 cannot be output as 2 is pushed much
+before 3 so can appear only after 3 is output.
